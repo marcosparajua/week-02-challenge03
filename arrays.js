@@ -9,18 +9,19 @@ export const manualArrayLength = (array) => {
 };
 
 export const fakeIndexOf = (arr, arrayElement) => {
-  if (arrayElement === undefined)
+  if (arrayElement === undefined) {
     throw new Error('you must indicate an element to be indexed.');
-};
-let elementIndex = -1;
-const arrayLength = manualArrayLength(arr);
-for (let i = 0; i < arrayLength; i++) {
-  if (arrayElement === arr[i]) {
-    elementIndex = i;
-    break;
+  }
+
+  let elementIndex = -1;
+  const arrayLength = manualArrayLength(arr);
+  for (let i = 0; i < arrayLength; i++) {
+    if (arrayElement === arr[i]) {
+      elementIndex = i;
+    }
   }
   return elementIndex;
-}
+};
 
 export const fakePush = (arr, ...p) => {
   const arrayLength = manualArrayLength(arr);
