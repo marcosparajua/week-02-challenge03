@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 import {
   manualArrayLength,
   fakeIndexOf,
@@ -42,9 +41,11 @@ test('If given an array with the elements cat, dog and chicken and a foreign ele
 test('If only given the array as argument it should return "you must indicate an element to be indexed." ', () => {
   const x = ['cat', 'dog', 'chicken'];
 
-  const expected = 'you must indicate an element to be indexed.';
-  const r = fakeIndexOf(x);
-  expect(r).toBe(expected);
+
+  expect(() => fakeIndexOf(x)).toThrow(
+    'you must indicate an element to be indexed.'
+  );
+
 });
 
 test('If only given an array of animals and another element, armadillo, as arguments it should return the new length of the array, that is, the original length plus one, in this case 4', () => {
@@ -62,4 +63,3 @@ test('If only given an array of animals and two more elements, armadillo and cat
   const r = fakePush(x, ...y);
   expect(r).toBe(expected);
 });
->>>>>>> Stashed changes
