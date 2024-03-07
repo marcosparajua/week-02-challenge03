@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 export const manualArrayLength = (array) => {
   let r = 0;
 
@@ -11,7 +10,7 @@ export const manualArrayLength = (array) => {
 };
 
 export const fakeIndexOf = (arr, arrayElement) => {
-  if (arrayElement === undefined) {
+  if (arrayElement === undefined) 
     throw new Error('you must indicate an element to be indexed.');
   }
   let elementIndex = -1;
@@ -20,6 +19,7 @@ export const fakeIndexOf = (arr, arrayElement) => {
     if (arrayElement === arr[i]) {
       elementIndex = i;
       break;
+
     }
   }
   return elementIndex;
@@ -47,4 +47,4 @@ export const fakeMap = (arr, func) => {
   }
   return newArray;
 };
->>>>>>> Stashed changes
+
